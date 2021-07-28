@@ -1,0 +1,31 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.loaderToggle {
+    display: none;
+}
+
+ul {
+    margin:20px 20px 0 0 ;
+}
+
+li {
+    list-style: none;
+    transition: .3s;
+}
+
+.photo-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-item__image, .photo-item__title {
+    width: 350px;
+}
+
+.photo-item__title {
+    text-align: center;
+}

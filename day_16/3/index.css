@@ -1,0 +1,29 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.loaderToggle {
+    display: none;
+}
+
+ul {
+    margin:20px 20px 0 0 ;
+}
+
+li {
+    list-style: none;
+    height: 35px;
+    background-color: rgb(12, 88, 2);
+    border-radius: 5px;
+    margin-top: 3px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    transition: .3s;
+    color: rgb(235, 219, 78);
+    font-size: 1.3rem;
+}
+
+li:hover {
+    transform: translateX(10px);
+}

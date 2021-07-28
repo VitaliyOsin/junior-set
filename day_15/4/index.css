@@ -1,0 +1,50 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.loaderToggle {
+    display: none;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+}
+
+.post__title {
+    color: #2d2d97;
+}
+
+.post__text {
+    color: #383839;
+    font-size: 1.1rem;
+}
+
+.post__comments-text {
+    color: #411403;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-left: 5vw;
+}
+
+.post__comments {
+    margin-left: 5vw;
+}
+
+.post-comment {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(158, 15, 15);
+    font-size: .9rem;
+}
+
+.post-comment__author {
+    font-weight: bold;
+    color: #d14812;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.post-comment__text {
+    font-style: italic;
+}
