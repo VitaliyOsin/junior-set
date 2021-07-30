@@ -1,0 +1,19 @@
+{
+  "name": "rlp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rollup",
+    "javascript"
+  ],
+  "author": "OsinVitaliy <d_dva@list.ru>",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-babel": "^5.3.0",
+    "rollup-plugin-styles": "^3.14.1"
+  }
+}
