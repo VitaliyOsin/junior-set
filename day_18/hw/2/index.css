@@ -1,0 +1,16 @@
+body{
+    background: chocolate;
+    color: cornsilk;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.text-h1 {
+    color: rgb(231, 225, 187);
+}
+
+.img-rollpack {
+    width: 300px;
+    padding: 5px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}

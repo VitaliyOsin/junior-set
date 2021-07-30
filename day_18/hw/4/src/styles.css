@@ -1,0 +1,16 @@
+body{
+    background: #DA6B00;
+    color: #FCFDD8;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.text-h1 {
+    color: #E4E9B7;
+}
+
+.img-rollpack {
+    width: 300px;
+    padding: 5px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
