@@ -1,0 +1,10 @@
+.cubes-sub {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+    position: relative;
+    margin-bottom: 8px;
+}
