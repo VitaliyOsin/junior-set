@@ -1,0 +1,44 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+input {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    padding: 5px;
+    width: 150px;
+    height: 25px;
+    border-radius: 7px;
+    outline: none;
+}
+button {
+    width: 75px;
+    height: 39px;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: .2s;
+}
+
+button:active {
+    width: 71px;
+    height: 35px;
+    margin: 2px;
+}
+
+button#startBtn {   
+    background: #ff0000;
+    border: 2px solid #ff0000;   
+}
+button#startBtn:hover {
+    border-color: #ffcccc;
+}
+
+button#resetBtn {   
+    background: #109910;
+    border: 2px solid #109910;   
+}
+button#resetBtn:hover {
+    border-color: #ccffcc;
+}

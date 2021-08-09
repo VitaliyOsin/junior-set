@@ -45,13 +45,16 @@ function makeList(arr) {
 const start = () => {
     const mathTest = createMathTest(-100, +100);
     const answer = prompt(`Задача: ${mathTest.expression} ?`);
-    const toSay = mathTest.result === Number(answer);
-    answerList.unshift(mathTest);
-    alert(toSay ? 'Верно!' : `Нет, ответ неверный. Правильный ответ: ${mathTest.result}`);
-    mathTest.answer = answer;
-    mathTest.right = toSay;
-    makeList(answerList);
-    console.log('EXPRESSION: ', mathTest);
+    if(answer){
+        const toSay = mathTest.result === Number(answer);
+        answerList.unshift(mathTest);
+        alert(toSay ? 'Верно!' : `Нет, ответ неверный. Правильный ответ: ${mathTest.result}`);
+        mathTest.answer = answer;
+        mathTest.right = toSay;
+        makeList(answerList);
+        console.log('EXPRESSION: ', mathTest);
+    }
+    
 }
 
 btn.addEventListener('click', start);
