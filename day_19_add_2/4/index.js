@@ -10,21 +10,13 @@ const assignO = (a,b) => {
 
 function toObjectParams(str) {
 	let quer;
-    const querToArr = str
-                      .split('&')
-                      .map(v => v.split('.')
-                                .map((v,i,arr) => v.search('=')>0 ? `{"${v.split('=')[0]}":"${v.split('=')[1]}"${'}'.repeat(arr.length)}` : `{"${v}":`).join('')
-                      )
-                      .map(v => JSON.parse(v));
+    const querToArr = str.split('&').map(v => v.split('.').map((v,i,arr) => v.search('=')>0 ? `{"${v.split('=')[0]}":"${v.split('=')[1]}"${'}'.repeat(arr.length)}` : `{"${v}":`).join('')).map(v => JSON.parse(v));
     quer = querToArr.reduce((t,v) => {
-      const obj = v;
       t = assignO(t,v);     
       return t;
     },{});
 
     return quer;
-    
-    //console.log(querToArr, quer);
 }
 
 console.log(toObjectParams(urlParams))
