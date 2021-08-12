@@ -4,19 +4,8 @@ const o3 = {user:{favotitecolor:"green"}};
 const o4 = {a:"1"};
 
 const assignO = (a,b) => {
-    const c = a;
-    console.log(Object.keys(c));
-
-    for(let key in b){
-
-        if(!c[key]){
-            c[key] = b[key];
-          }else{
-            assignO(c[key],b[key]);
-          }
-    }
-
-    return c;
+    for(let key in b) !a[key] ? a[key] = b[key] : assignO(a[key],b[key]);
+    return a;
 }
 
 

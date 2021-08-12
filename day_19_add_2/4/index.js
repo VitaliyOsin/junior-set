@@ -1,37 +1,10 @@
 const urlParams = "user.name.firstname=Bob&user.name.lastname=Smith&user.favoritecolor=green&a=1";
 
 const assignO = (a,b) => {
-  const c = a;
-  for(let key in b){
-    !c[key] ? c[key] = b[key] : assignO(c[key],b[key]);
-  }
-  return c;
+  for(let key in b) !a[key] ? a[key] = b[key] : assignO(a[key],b[key]);
+  return a;
 }
 
-function toObjectParams(str) {
-   let quer;
-   const querToArr = str.split('&').map(v => v.split('.').map((v,i,arr) => v.search('=')>0 ? `{"${v.split('=')[0]}":"${v.split('=')[1]}"${'}'.repeat(arr.length)}` : `{"${v}":`).join('')).map(v => JSON.parse(v));
-    quer = querToArr.reduce((t,v) => {
-      t = assignO(t,v);     
-      return t;
-    },{});
+const toObjectParams = str => str.split('&').map(v => v.split('.').map((v,i,arr) => v.search('=')>0 ? `{"${v.split('=')[0]}":"${v.split('=')[1]}"${'}'.repeat(arr.length)}` : `{"${v}":`).join('')).map(v => JSON.parse(v)).reduce((t,v) => assignO(t,v),{});
 
-   return quer;
-}
-
-console.log(toObjectParams(urlParams))
-
-
-// Результат
-/*
-{
-  a: "1",
-  user: {
-    favoritecolor: "green",
-    name: {
-			firstname: "Bob",
-			lastname: "Smith",
-		}
-  }
-}
-*/
+console.log(toObjectParams(urlParams));
